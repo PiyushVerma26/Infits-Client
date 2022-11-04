@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Infits Clients</string>
+    <string name="meal_planner">Meal Planner</string>
+    <string name="meal_nutrition_s">Meal Nutrition\'s</string>
+    <string name="daily_meal_schedule">Daily Meal Schedule</string>
+    <string name="check">Check</string>
+    <string name="today_s_meal">Today\'s Meal</string>
+    <string name="find_something_to_eat">Find Something to eat</string>
+    <string name="logo">logo</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="aloo_paratha">Aloo Paratha</string>
+    <string name="today">Today</string>
+    <string name="_7_10am">7:10 am</string>
+    <string name="_500">500</string>
+    <string name="calorie_tracker">CALORIE TRACKER</string>
+    <string name="kcal_eaten">kcal Eaten</string>
+    <string name="_1500">1500</string>
+    <string name="kcal_left">kcal left</string>
+    <string name="_150g_left">150g left</string>
+    <string name="carb">CARB</string>
+    <string name="kcal_burned">kcal Burned</string>
+    <string name="daily_meals">Daily Meals</string>
+    <string name="fat">FAT</string>
+    <string name="protein">PROTEIN</string>
+    <string name="fiber">FIBER</string>
+    <string name="breakfast">Breakfast</string>
+    <string name="_450_kcal">/ 450 kcal</string>
+    <string name="_200">200</string>
+    <string name="hotdog">Hotdog</string>
+</resources>

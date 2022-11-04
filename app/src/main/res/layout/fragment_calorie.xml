@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.CalorieFragment">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/caloriegren"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|start"
+            android:src="@drawable/backwhite"
+            tools:ignore="ContentDescription,ImageContrastCheck,ImageContrastCheck"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="18dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nats"
+            android:text="@string/calorie_tracker"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            tools:ignore="TextContrastCheck"
+            tools:layout_editor_absoluteX="54dp" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/img_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        android:orientation="vertical">
+<!--        seekbar-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_marginTop="15dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+<!--            knife kcal-->
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="22dp"
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="26dp"
+                    android:layout_gravity="center"
+                    android:layout_height="28dp"
+                    android:src="@drawable/knife"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_500"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/kcal_eaten"
+                    android:textColor="#5D4037"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+           <RelativeLayout
+               android:layout_width="190dp"
+              android:layout_marginEnd="20dp"
+               android:layout_marginStart="40dp"
+               android:layout_height="190dp">
+               <ProgressBar
+                   android:layout_width="188dp"
+                   android:layout_height="188dp"
+                   android:rotation="-95"
+                   android:progressDrawable="@drawable/progressback"
+                   android:layout_gravity="center"/>
+
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="147dp"
+                   android:layout_height="147dp"
+                   android:layout_centerInParent="true"
+                   android:background="@drawable/seekback"
+                   android:orientation="vertical">
+
+                   <androidx.appcompat.widget.AppCompatImageView
+                       android:layout_width="26dp"
+                       android:layout_height="28dp"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="20dp"
+                       android:src="@drawable/sign"
+                       tools:ignore="ImageContrastCheck" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="15dp"
+                       android:fontFamily="@font/baloo_bhai_2"
+                       android:text="@string/_1500"
+                       android:textSize="34sp" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       android:layout_marginTop="-10dp"
+                       android:fontFamily="@font/baloo_bhai_2"
+                       android:text="@string/kcal_left"
+                       android:textSize="14sp" />
+
+
+               </androidx.appcompat.widget.LinearLayoutCompat>
+
+           </RelativeLayout>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|end"
+                android:layout_marginEnd="20dp"
+
+                android:orientation="vertical">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="26dp"
+                    android:layout_height="28dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/img_4"/>
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_500"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/kcal_burned"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+<!--        progress-->
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+<!--            carb-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:progress="25"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/carbback"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/carb"
+                    android:textColor="#5D5D5D"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_150g_left"
+                    android:textColor="#5D5D5D"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp,TextContrastCheck" />
+
+            </LinearLayout>
+
+<!--            fiber-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progress="25"
+                    android:progressDrawable="@drawable/fiberback"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/fiber"
+                    android:textColor="#5D5D5D"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_150g_left"
+                    android:textColor="#5D5D5D"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp,TextContrastCheck" />
+
+            </LinearLayout>
+
+<!--            protein-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:progress="25"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/proteinback"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/protein"
+                    android:textColor="#5D5D5D"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_150g_left"
+                    android:textColor="#5D5D5D"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp,TextContrastCheck" />
+
+            </LinearLayout>
+
+<!--            fat-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+                <ProgressBar
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:progress="25"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:progressDrawable="@drawable/fatback"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/fat"
+                    android:textColor="#5D5D5D"
+                    android:textSize="12sp"
+                    tools:ignore="TextContrastCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/baloo_bhai_2"
+                    android:text="@string/_150g_left"
+                    android:textColor="#5D5D5D"
+                    android:textSize="10sp"
+                    tools:ignore="SmallSp,TextContrastCheck" />
+
+            </LinearLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/dailyMeals"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/baloo2"
+        android:text="@string/daily_meals"
+        android:textColor="#5D5D5D"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/dailyMealsRecycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/log"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyMeals"
+        android:layout_margin="15dp"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:padding="10dp"
+        android:src="@drawable/img_7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dailyMealsRecycle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

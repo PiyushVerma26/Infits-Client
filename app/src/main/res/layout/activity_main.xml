@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:context=".View.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        tools:context=".View.MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical|start"
+                android:src="@drawable/back"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/nats"
+                android:text="@string/meal_planner"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nats"
+                android:gravity="center_vertical|start"
+                android:text="@string/meal_nutrition_s"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="140dp"
+                android:background="@drawable/spinnerback"
+                android:clickable="true"
+                android:focusable="true"
+                android:minWidth="110dp"
+                android:minHeight="42dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/graph"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:minWidth="329dp"
+            android:minHeight="234dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linear" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearDaily"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/spinnerback"
+            android:backgroundTint="#C9E2FF"
+            android:minHeight="52dp"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/graph">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nats"
+                android:gravity="center_vertical|start"
+                android:text="@string/daily_meal_schedule"
+                android:textColor="@color/black"
+                android:textSize="19sp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="79dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="110dp"
+                android:background="@drawable/spinnerback"
+                android:fontFamily="@font/nats"
+                android:text="@string/check"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                tools:ignore="TextContrastCheck" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearDaily">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/nats"
+                android:gravity="center_vertical|start"
+                android:text="@string/today_s_meal"
+                android:textColor="@color/black"
+                android:textSize="21sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="170dp"
+                android:background="@drawable/spinnerback"
+                android:clickable="true"
+                android:focusable="true"
+                android:minWidth="110dp"
+                android:minHeight="42dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:name="hello.tech.infitsclients.fragments.BreakFast"
+            android:id="@+id/mealFragment"
+            android:layout_width="match_parent"
+            android:layout_height="232dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:layout="@layout/fragment_break_fast"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearToday"
+            />
+        <TextView
+            android:id="@+id/something"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/nats"
+            android:gravity="center_vertical|start"
+            android:text="@string/find_something_to_eat"
+            android:textColor="@color/black"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/mealFragment" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:minHeight="177dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/something">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="230dp"
+                android:layout_marginTop="-50dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/img"
+                tools:ignore="ImageContrastCheck" />
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="177dp"
+                android:src="@drawable/img_1"
+                android:contentDescription="@string/logo"
+                android:layout_weight="1"/>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
